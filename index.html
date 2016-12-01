@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+	<link rel="stylesheet" href="./app/prd/styles/app.css">
+	
+</head>
+<body>
+	<div ng-controller="dome1Con">
+		<p ng-repeat="itme in user">{{itme.name}}--{{itme.email}}</p>
+		<p ng-show="isshow">woshi1</p>
+		<p ng-hide="isshow">woshi2</p>
+		<p ng-if="isshow">woshi3</p>
+		<input type="text" ng-model="itme"  ng-keyUp="additme($event)">
+		<ul>
+			<li ng-repeat="itme in itmes track by itme">{{itme}}</li>
+		</ul>
+		<!-- <button ng-click="add($event)">+</button> -->
+	</div>
+
+	<!-- demo4 -->
+	<div ng-controller="dome1Con">
+		<p>{{price | currency:$}}</p>
+
+		<ul>
+			<li ng-repeat="i in books | limitTo:2 | orderBy:'i.updated'">
+				<p>书名：{{i.name | lowercase}}</p>
+				<p>更新时间：{{i.updated | date:"yyyy年MM月dd日 HH:mm:ss"}}</p>
+			</li>
+		</ul>
+	</div>
+<script src="./app/libs/angular.min.js"></script>
+<script src="./app/src/scripts/demos/demo.js"></script>
+</body>
+</body>
+</html>
