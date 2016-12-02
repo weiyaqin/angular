@@ -1,6 +1,35 @@
-$bg:#fff;
+$bg:#ccc;
 body 
 {
 	background:$bg;
 	color:green;
+}
+
+.disable 
+{
+	color:red;
+}
+
+.able 
+{
+	color:yellow;
+}
+
+table 
+{
+	width: 100%;
+	border-collapse: collapse;
+	thead 
+	{
+		td 
+		{
+			font-size: bold;
+			
+		}
+	}
+	td 
+	{
+		border:1px solid #333;
+		text-align: center;
+	}
 }

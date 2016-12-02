@@ -49,6 +49,38 @@ myApp.controller("dome1Con",["$scope",function($scope){
 		}
 	]
 
-	$scope.price = 199.98
-
+	$scope.price = 199.98;
+	$scope.red=false;
+	
+	var filters = [
+	{
+		name:"weiyaqin",
+		phone:"13621117454"
+	},{
+		name:"guojunmei",
+		phone:"13831117454"
+	},{
+		name:"zhangrui",
+		phone:"13621113209"
+	},{
+		name:"chentingting",
+		phone:"13638887454"
+	}]
+		
+	$scope.filters = filters;
+	$scope.searchText= "";
+	$scope.search = function (obj){
+		if($scope.searchText !=""){
+			if(obj.name.toLowerCase().indexOf($scope.searchText) != -1 || obj.phone.indexOf($scope.searchText) != -1)
+			{
+				return true;
+			}else
+			{
+				return false;
+			}
+		}else
+		{
+			return true;
+		}
+	}
 }])
