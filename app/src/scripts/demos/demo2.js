@@ -7,7 +7,7 @@ myApp.controller("shousuo",["$scope",function($scope){
 			LastName:"vane",
 			Gender:"Male",
 			Salsry:"12,333.50",
-			Salsr:"￥12,333.5",
+			Salsr:"123335",
 			birthday:"2007-07-11",
 		},
 		{
@@ -15,7 +15,7 @@ myApp.controller("shousuo",["$scope",function($scope){
 			LastName:"rose",
 			Gender:"Female",
 			Salsry:"232,334.23",
-			Salsr:"￥232,334.2",
+			Salsr:"2323342",
 			birthday:"1997-02-03",
 		},
 		{
@@ -23,7 +23,7 @@ myApp.controller("shousuo",["$scope",function($scope){
 			LastName:"hot",
 			Gender:"Male",
 			Salsry:"66,880.50",
-			Salsr:"￥66,880.5",
+			Salsr:"668805",
 			birthday:"1986-03-04",
 		},
 		{
@@ -31,7 +31,7 @@ myApp.controller("shousuo",["$scope",function($scope){
 			LastName:"bear",
 			Gender:"Male",
 			Salsry:"68,000.00",
-			Salsr:"￥68,000.0",
+			Salsr:"680000",
 			birthday:"1968-03-22",
 		}
 	]
@@ -62,7 +62,6 @@ myApp.controller("shousuo",["$scope",function($scope){
 	}
 //排序
 	$scope.col = "FirstName" ;  //默认按FirstName列排序
-
 	$scope.desc = 0 ; //默认排序条件升序
-
+	$scope.desc = true; //控制class是否显示
 }])

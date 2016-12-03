@@ -24,6 +24,7 @@ table
 		td 
 		{
 			font-size: bold;
+			position: relative;
 			
 		}
 	}
@@ -32,4 +33,24 @@ table
 		border:1px solid #333;
 		text-align: center;
 	}
+}
+
+.up{
+	position: absolute;
+	top: 2px;
+	right: 0;
+	width: 0;
+	height: 0;
+	border: 20px transparent solid;
+	border-top-color: #000;
+}
+
+.down{
+	position: absolute;
+	top: -3px;
+	right: 0;
+	width: 0;
+	height: 0;
+	border: 5px transparent solid;
+	border-bottom-color: #000;
 }

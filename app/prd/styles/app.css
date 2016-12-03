@@ -1,1 +1,1 @@
-body{background:#ccc;color:green}.disable{color:red}.able{color:#ff0}table{width:100%;border-collapse:collapse}table td{border:1px solid #333;text-align:center}
+body{background:#ccc;color:green}.disable{color:red}.able{color:#ff0}table{width:100%;border-collapse:collapse}table thead td{font-size:bold;position:relative}.down,.up{position:absolute;right:0;width:0;height:0}table td{border:1px solid #333;text-align:center}.up{top:2px;border:20px solid transparent;border-top-color:#000}.down{top:-3px;border:5px solid transparent;border-bottom-color:#000}
