@@ -70,12 +70,12 @@
 	<table>
 		<thead>
 			<tr>
-				<td ng-click="col='FirstName';desc=!desc">FirstName<span ng-class="up"></span></td>
-				<td ng-click="col='LastName';desc=!desc">LastName<span></span></td>
-				<td ng-click="col='Gender';desc=!desc">Gender<span></span></td>
-				<td ng-click="col='Salsry';desc=!desc">Salsry<span></span></td>
-				<td ng-click="col='Salsr';desc=!desc">Salsr<span></span></td>
-				<td ng-click="col='birthday';desc=!desc">birthday<span></span></td>
+				<td ng-click="setSort('FirstName')">FirstName<span ng-class="getClass('FirstName')"></span></td>
+				<td ng-click="setSort('LastName')">LastName<span ng-class="getClass('LastName')"></span></td>
+				<td ng-click="setSort('Gender')">Gender<span ng-class="getClass('Gender')"></span></td>
+				<td ng-click="setSort('Salsry')">Salsry<span ng-class="getClass('Salsry')"></span></td>
+				<td ng-click="setSort('Salsr')">Salsr<span ng-class="getClass('Salsr')"></span></td>
+				<td ng-click="setSort('birthday')">birthday<span ng-class="getClass('birthday')"></span></td>
 			</tr>
 		</thead>
 		<tbody>
@@ -90,7 +90,7 @@
 		</tbody>
 	</table>
 </div>
-<script src="./jquery-2.1.1.js"></script>
+<script src="./app/libs/jquery-2.1.1.js"></script>
 <script src="./app/libs/angular.min.js"></script>
 <script src="./app/prd/scripts/app.js"></script>
 </body>

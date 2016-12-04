@@ -62,6 +62,16 @@ myApp.controller("shousuo",["$scope",function($scope){
 	}
 //排序
 	$scope.col = "FirstName" ;  //默认按FirstName列排序
-	$scope.desc = 0 ; //默认排序条件升序
-	$scope.desc = true; //控制class是否显示
+	$scope.desc = true ; //默认排序条件升序
+	/*按哪个字段排序*/
+	$scope.setSort = function (column){
+		$scope.desc = $scope.col == column ? !$scope.desc:false;
+		$scope.col = column
+	}
+	$scope.getClass = function (column){
+		if($scope.col == column){
+			return $scope.desc? "up" : "down"
+		}
+	}
+
 }])
