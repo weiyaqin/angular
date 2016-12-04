@@ -8,20 +8,20 @@
 	
 </head>
 <body>
-	<div ng-controller="dome1Con">
-		<p ng-repeat="itme in user">{{itme.name}}--{{itme.email}}</p>
+	<!-- <div ng-controller="dome1Con">
+		<p ng-repeat="itme in user">{{itme.name}}-{{itme.email}}</p>
 		<p ng-show="isshow">woshi1</p>
 		<p ng-hide="isshow">woshi2</p>
 		<p ng-if="isshow">woshi3</p>
 		<input type="text" ng-model="itme"  ng-keyUp="additme($event)">
 		<ul>
 			<li ng-repeat="itme in itmes track by itme">{{itme}}</li>
-		</ul>
+		</ul>-->
 		<!-- <button ng-click="add($event)">+</button> -->
-	</div>
+	<!-- </div>  -->
 
 	<!-- demo4 -->
-	<div ng-controller="dome1Con">
+	<!-- <div ng-controller="dome1Con">
 		<p>{{price | currency:$}}</p>
 
 		<ul>
@@ -30,9 +30,69 @@
 				<p>更新时间：{{i.updated | date:"yyyy年MM月dd日 HH:mm:ss"}}</p>
 			</li>
 		</ul>
-	</div>
+	</div> -->
+	<!-- demo5 -->
+	<!-- <div ng-controller="dome1Con">-->
+		<!-- ng-class -->
+		<!-- <p ng-class="{'disable':red}">dskfjsdlkfjsdkljfkls</p>
+		<p ng-class="{true:'disable',false:'able'}[red]">dskfjsdlkfjsdkljfkls</p>
+	</div>  -->
+	<!-- <div ng-controller="dome1Con">
+		<input type="text" ng-model="searchText" />
+		<table>
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>name</td>
+					<td>phone</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="news in filters | filter:search:obj">
+					<td>{{$index+1}}</td>
+					<td>{{news.name}}</td>
+					<td>{{news.phone}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div> -->
+
+
+
+
+<!-- 作业 -->
+<div ng-controller="shousuo">
+	<h2>
+		<input type="text" placeholder="FirstName" ng-model="serchText">
+		<input type="text" placeholder="LastName">
+		<input type="checkbox">Exact Match
+	</h2>
+	<table>
+		<thead>
+			<tr>
+				<td ng-click="col='FirstName';desc=!desc">FirstName<span ng-class="up"></span></td>
+				<td ng-click="col='LastName';desc=!desc">LastName<span></span></td>
+				<td ng-click="col='Gender';desc=!desc">Gender<span></span></td>
+				<td ng-click="col='Salsry';desc=!desc">Salsry<span></span></td>
+				<td ng-click="col='Salsr';desc=!desc">Salsr<span></span></td>
+				<td ng-click="col='birthday';desc=!desc">birthday<span></span></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="ind in xinxi | filter:search:obj | orderBy:col:desc">
+				<td>{{ind.FirstName}}</td>
+				<td>{{ind.LastName}}</td>
+				<td>{{ind.Gender}}</td>
+				<td>{{ind.Salsry}}</td>
+				<td>{{ind.Salsr | currency:'￥'}}</td><!--  | currency:$ -->
+				<td>{{ind.birthday}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script src="./jquery-2.1.1.js"></script>
 <script src="./app/libs/angular.min.js"></script>
-<script src="./app/src/scripts/demos/demo.js"></script>
+<script src="./app/prd/scripts/app.js"></script>
 </body>
 </body>
 </html>

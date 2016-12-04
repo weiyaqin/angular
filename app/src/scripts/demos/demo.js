@@ -11,7 +11,7 @@ myApp.controller("dome1Con",["$scope",function($scope){
 			email:"guojunmei@163.com"
 		}
 	]
-
+	
 	$scope.user = user
 
 	$scope.isshow = false;
